@@ -4,5 +4,6 @@ __pycache__/
 .venv/
 generated/
 dist/
+outputs/
 *.tar.gz
 AI-05 - Nurse to Patient Matching.docx
