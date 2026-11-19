@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Care Match | TheCarePal worklet</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header><div class="wrap brand"><span class="mark" aria-hidden="true">+</span> Care Match <span class="tag">Synthetic demo</span></div></header>
+  <main class="wrap">
+    <h1>Find a nurse for home care</h1>
+    <p class="intro">Choose a sample care request to compare eligible nurses and see how each match was ranked.</p>
+    <div class="layout">
+      <aside aria-labelledby="request-heading">
+        <h2 id="request-heading">Care request</h2>
+        <label for="request">Sample request</label>
+        <select id="request" disabled></select>
+        <dl id="requirements"></dl>
+        <label for="ranking">Ranking method</label>
+        <select id="ranking" disabled>
+          <option value="default">Default weights</option>
+          <option value="learned">Learned from synthetic feedback</option>
+        </select>
+        <button id="find" disabled>Find matches</button>
+        <p id="dataset" class="muted"></p>
+      </aside>
+      <section class="results" aria-labelledby="results-heading">
+        <h2 id="results-heading">Recommended nurses</h2>
+        <p id="status" role="status">Loading sample requests…</p>
+        <ol id="matches"></ol>
+        <a id="api" hidden target="_blank" rel="noopener">View JSON response</a>
+      </section>
+      <section id="map-panel" hidden aria-labelledby="map-heading">
+        <h2 id="map-heading">Match locations</h2>
+        <canvas id="map" role="img"></canvas>
+        <p class="muted">Schematic map. P marks the patient. Numbers match the ranking. Distances are straight-line estimates.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+generated/
+AI-05 - Nurse to Patient Matching.docx
