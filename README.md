@@ -2,6 +2,12 @@
 
 AI-05 internship worklet. Care Match ranks available synthetic nurses for home-care requests in Pune, Mumbai and Delhi. The demo opens with a sample request and shows the shortlist, a score breakdown for each nurse, and a schematic map.
 
+## Hosted demo
+
+The hosted demo is available at https://care-match-manan.lucky-cstd.chatgpt.site.
+
+Python remains the local reference implementation. Sites hosts a JavaScript Worker adapter in `hosting/worker.mjs`. Build it with `node hosting/build.mjs` using Node.js 18 or later and Python. The build embeds the original browser assets, Python-generated dataset, and fitted weights into one server module. The hosted API applies the same eligibility rules and scoring formulas. Its rankings, rounded scores, distances, and component points were checked against Python for all 100 saved requests in both modes. No API key or paid model call is required.
+
 ## Run locally
 
 Install Python 3.10 or later. From the repository root, run:
